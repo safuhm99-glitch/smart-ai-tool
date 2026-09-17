@@ -1,63 +1,229 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أداة الذكاء الاصطناعي لتلخيص وإعادة صياغة النصوص</title>
-    <style>
-        body { font-family: system-ui, sans-serif; background: #f4f6f8; margin: 0; padding: 20px; text-align: center; }
-        .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        h1 { color: #1a73e8; }
-        textarea { width: 100%; height: 150px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; margin-bottom: 15px; font-size: 16px; }
-        button { background: #1a73e8; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; }
-        button:hover { background: #1557b0; }
-        .result-box { margin-top: 20px; padding: 15px; background: #e8f0fe; border-radius: 8px; text-align: right; min-height: 80px; }
-        .ad-space { background: #eee; border: 1px dashed #ccc; padding: 20px; margin: 20px 0; border-radius: 8px; color: #777; font-size: 14px; }
-        footer { margin-top: 30px; font-size: 14px; color: #555; }
-        footer a { color: #1a73e8; text-decoration: none; margin: 0 10px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أداة الذكاء الاصطناعي الذكية | Smart AI Tool</title>
+  <style>
+    :root {
+      --primary-color: #4A90E2;
+      --bg-color: #F4F7F9;
+      --card-bg: #FFFFFF;
+      --text-color: #333333;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    main {
+      flex: 1;
+      max-width: 800px;
+      width: 90%;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .ad-slot {
+      background-color: #e9ecef;
+      border: 1px dashed #adb5bd;
+      padding: 15px;
+      text-align: center;
+      color: #6c757d;
+      border-radius: 8px;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #357ABD;
+    }
+    .output {
+      margin-top: 15px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      min-height: 50px;
+    }
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
+    footer a {
+      color: #4A90E2;
+      margin: 0 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    /* Modals for Legal Pages */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      position: relative;
+      direction: rtl;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- مساحة إعلانية علوية -->
-        <div class="ad-space">إعلان - AdSpace</div>
+  <header>
+    <h1>أداة الذكاء الاصطناعي الذكية</h1>
+    <p>أداة مجانية لمساعدتك في إعادة صياغة وتحسين النصوص بضغطة زر</p>
+  </header>
 
-        <h1>أداة تلخيص وإعادة صياغة النصوص الذكية</h1>
-        <p>اكتب أو الصق نصك أدناه لتلخيصه أو إعادة صياغته فوراً باستخدام الذكاء الاصطناعي.</p>
-
-        <textarea id="inputText" placeholder="ضع النص هنا..."></textarea><br>
-        <button onclick="processText()">معالجة النص</button>
-
-        <h3>النتيجة:</h3>
-        <div id="output" class="result-box">ستظهر النتيجة هنا بعد الضغط على زر المعالجة...</div>
-
-        <!-- مساحة إعلانية سفلية -->
-        <div class="ad-space">إعلان - AdSpace</div>
-
-        <hr>
-        <div style="text-align: right; font-size: 14px; color: #444; line-height: 1.6;">
-            <h3>عن الأداة:</h3>
-            <p>تساعدك هذه الأداة المعتمدة على الذكاء الاصطناعي في اختصار النصوص الطويلة، صياغة المقالات، وتحسين جودة الكتابة باللغة العربية والإنجليزية بأعلى دقة لخدمة الطلاب والباحثين وصناع المحتوى.</p>
-        </div>
+  <main>
+    <!-- Ad Slot Top -->
+    <div class="ad-slot">
+      <!-- Google AdSense Top Banner -->
+      <p>إعلان علوي</p>
     </div>
 
-    <footer>
-        <a href="#">سياسة الخصوصية</a> | 
-        <a href="#">الشروط والأحكام</a> | 
-        <a href="#">اتصل بنا</a>
-    </footer>
+    <!-- Instruction Box -->
+    <div class="card">
+      <h3>كيف تستخدم الأداة؟</h3>
+      <p>اكتب أو ألصق النص الذي تريد تحسينه أو صياغته في الصندوق أدناه، ثم اضغط على زر المعالجة للحصول على النتيجة فوراً.</p>
+    </div>
 
-    <script>
-        function processText() {
-            const text = document.getElementById('inputText').value;
-            if(!text) { alert('يرجى إدخال نص أولاً!'); return; }
-            document.getElementById('output').innerText = 'جاري معالجة النص بواسطة الذكاء الاصطناعي...';
-            setTimeout(() => {
-                document.getElementById('output').innerText = 'تمت المعالجة بنجاح! هذا نص تجريبي للنتيجة المباشرة.';
-            }, 1500);
-        }
-    </script>
+    <!-- Main Tool Interface -->
+    <div class="card">
+      <label for="inputText"><strong>أدخل النص هنا:</strong></label>
+      <textarea id="inputText" placeholder="اكتب النص هنا..."></textarea>
+      <button onclick="processText()">معالجة النص بالذكاء الاصطناعي</button>
+      
+      <div class="output" id="outputResult">
+        النتيجة ستظهر هنا...
+      </div>
+    </div>
 
+    <!-- Ad Slot Bottom -->
+    <div class="ad-slot">
+      <!-- Google AdSense Bottom Banner -->
+      <p>إعلان سفلي</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 أداة الذكاء الاصطناعي الذكية. جميع الحقوق محفوظة.</p>
+    <div>
+      <a onclick="openModal('privacyModal')">سياسة الخصوصية</a> | 
+      <a onclick="openModal('aboutModal')">من نحن</a> | 
+      <a onclick="openModal('contactModal')">اتصل بنا</a>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('privacyModal')">&times;</span>
+      <h2>سياسة الخصوصية</h2>
+      <p>نحن نحترم خصوصية زوارنا. تسترشد هذه السياسة بنوعية المعلومات التي نجمعها وكيفية استخدامها.</p>
+      <p>نحن نستخدم شركات إعلان كأطراف ثالثة لتقديم الإعلانات عندما تزور موقعنا (مثل Google AdSense). قد تستخدم هذه الشركات معلومات حول زياراتك لهذا الموقع من أجل تقديم إعلانات حول البضائع والخدمات التي تهمك عن طريق ملف تعريف الارتباط (Cookies).</p>
+    </div>
+  </div>
+
+  <!-- About Us Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('aboutModal')">&times;</span>
+      <h2>من نحن</h2>
+      <p>موقع "أداة الذكاء الاصطناعي الذكية" هو منصة أدوات ويب مجانية تهدف إلى تقديم حلول سريعة ومبسطة للتعامل مع النصوص ومساعدتك في مهامك اليومية بكفاءة عالية.</p>
+    </div>
+  </div>
+
+  <!-- Contact Us Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('contactModal')">&times;</span>
+      <h2>اتصل بنا</h2>
+      <p>إذا كان لديك أي استفسار أو اقتراح، يمكنك التواصل معنا عبر البريد الإلكتروني:</p>
+      <p><strong>support@smart-ai-tool.com</strong></p>
+    </div>
+  </div>
+
+  <script>
+    function processText() {
+      const input = document.getElementById('inputText').value;
+      const output = document.getElementById('outputResult');
+      if (!input.trim()) {
+        output.innerText = 'يرجى كتابة نص أولاً!';
+        return;
+      }
+      output.innerText = 'جاري معالجة النص... \n\n' + input.split('').reverse().join('');
+    }
+
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
 </body>
 </html>
