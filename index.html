@@ -1,224 +1,223 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" id="html-root">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>أداة الذكاء الاصطناعي الذكية | Smart AI Tool</title>
-  
-  <!-- Google AdSense Code -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8540424347567287"
-     crossorigin="anonymous"></script>
-
-  <style>
-    :root {
-      --primary-color: #4A90E2;
-      --bg-color: #F4F7F9;
-      --card-bg: #FFFFFF;
-      --text-color: #333333;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    header {
-      background-color: var(--primary-color);
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    main {
-      flex: 1;
-      max-width: 800px;
-      width: 90%;
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .ad-slot {
-      background-color: #e9ecef;
-      border: 1px dashed #adb5bd;
-      padding: 15px;
-      text-align: center;
-      color: #6c757d;
-      border-radius: 8px;
-    }
-    .card {
-      background: var(--card-bg);
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    }
-    textarea {
-      width: 100%;
-      height: 120px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      resize: vertical;
-      box-sizing: border-box;
-      font-size: 1rem;
-    }
-    button {
-      background-color: var(--primary-color);
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 10px;
-      width: 100%;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background-color: #357ABD;
-    }
-    .output {
-      margin-top: 15px;
-      padding: 15px;
-      background: #f8f9fa;
-      border-radius: 8px;
-      min-height: 50px;
-    }
-    footer {
-      background-color: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      margin-top: auto;
-    }
-    footer a {
-      color: #4A90E2;
-      margin: 0 10px;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    .modal-content {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      max-width: 600px;
-      width: 90%;
-      max-height: 80vh;
-      overflow-y: auto;
-      position: relative;
-      direction: rtl;
-    }
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      left: 15px;
-      font-size: 20px;
-      cursor: pointer;
-      color: #999;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniMind AI - منصة الذكاء الاصطناعي الشاملة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        arabic: ['Tajawal', 'sans-serif'],
+                        english: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        .en-font { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
 
-  <header>
-    <h1>أداة الذكاء الاصطناعي الذكية</h1>
-    <p>أداة مجانية لمساعدتك في إعادة صياغة وتحسين النصوص بضغطة زر</p>
-  </header>
+    <!-- Header & Navbar -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center font-bold text-xl shadow-lg shadow-indigo-500/30">OM</div>
+                <span class="text-2xl font-black tracking-wider bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">OmniMind AI</span>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-medium text-slate-300">
+                <a href="#features" class="hover:text-indigo-400 transition" data-ar="المميزات" data-en="Features">المميزات</a>
+                <a href="#solutions" class="hover:text-indigo-400 transition" data-ar="للأفراد والشركات" data-en="Solutions">للأفراد والشركات</a>
+                <a href="#pricing" class="hover:text-indigo-400 transition" data-ar="الباقات والأسعار" data-en="Pricing">الباقات والأسعار</a>
+                <a href="#security" class="hover:text-indigo-400 transition" data-ar="الأمان والخصوصية" data-en="Security">الأمان والخصوصية</a>
+            </nav>
 
-  <main>
-    <div class="ad-slot">
-      <p>إعلان علوي</p>
-    </div>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <!-- Language Switcher Button -->
+                <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-xs font-semibold hover:bg-slate-700 transition flex items-center gap-1.5">
+                    🌐 <span id="lang-btn-text">English</span>
+                </button>
+                <a href="#pricing" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition shadow-lg shadow-indigo-600/20" data-ar="ابدأ الآن مجاناً" data-en="Get Started Free">ابدأ الآن مجاناً</a>
+            </div>
+        </div>
+    </header>
 
-    <div class="card">
-      <h3>كيف تستخدم الأداة؟</h3>
-      <p>اكتب أو ألصق النص الذي تريد تحسينه أو صياغته في الصندوق أدناه، ثم اضغط على زر المعالجة للحصول على النتيجة فوراً.</p>
-    </div>
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-28 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.15),rgba(255,255,255,0))]"></div>
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-6">
+                ✨ <span data-ar="منصة الذكاء الاصطناعي للأفراد والشركات" data-en="AI Platform for Individuals & Enterprises">منصة الذكاء الاصطناعي للأفراد والشركات</span>
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight mb-8" data-ar="ضاعف إنتاجيتك وعزز أعمالك بقوة الذكاء الاصطناعي الشامل" data-en="Multiply Your Productivity & Scale Business with OmniMind AI">
+                ضاعف إنتاجيتك وعزز أعمالك بقوة الذكاء الاصطناعي الشامل
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed" data-ar="منصة متكاملة تجمع بين توليد المحتوى، تحليل البيانات المتقدم، وتخطيط استراتيجيات الشركات والأعمال في مكان واحد." data-en="An all-in-one platform combining content generation, advanced data analysis, and business strategy planning in one place.">
+                منصة متكاملة تجمع بين توليد المحتوى، تحليل البيانات المتقدم، وتخطيط استراتيجيات الشركات والأعمال في مكان واحد.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#pricing" class="px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-base transition shadow-xl shadow-indigo-600/30" data-ar="اكتشف الباقات والخصومات" data-en="Explore Plans & Discounts">اكتشف الباقات والخصومات</a>
+                <a href="#features" class="px-8 py-4 rounded-xl bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-300 font-bold text-base transition" data-ar="استكشف الأقسام الذكية" data-en="Explore AI Modules">استكشف الأقسام الذكية</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <label for="inputText"><strong>أدخل النص هنا:</strong></label>
-      <textarea id="inputText" placeholder="اكتب النص هنا..."></textarea>
-      <button onclick="processText()">معالجة النص بالذكاء الاصطناعي</button>
-      
-      <div class="output" id="outputResult">
-        النتيجة ستظهر هنا...
-      </div>
-    </div>
+    <!-- Features Section -->
+    <section id="features" class="py-24 border-t border-slate-800/80 bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4" data-ar="أقسام متكاملة لكل احتياجاتك" data-en="Integrated Modules for All Your Needs">أقسام متكاملة لكل احتياجاتك</h2>
+                <p class="text-slate-400" data-ar="أدوات ذكية مصممة خصيصاً لتناسب الأفراد، صناع المحتوى، والشركات الكبرى." data-en="Smart tools specifically designed for individuals, creators, and enterprises.">أدوات ذكية مصممة خصيصاً لتناسب الأفراد، صناع المحتوى، والشركات الكبرى.</p>
+            </div>
 
-    <div class="ad-slot">
-      <p>إعلان سفلي</p>
-    </div>
-  </main>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition">✍️</div>
+                    <h3 class="text-xl font-bold mb-3" data-ar="توليد النصوص والمحتوى" data-en="Content & Text Generation">توليد النصوص والمحتوى</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-ar="أنشئ مقالات احترافية، إعلانات، وأفكار محتوى لمنصات التواصل الاجتماعي باللغتين العربية والإنجليزية بثوانٍ." data-en="Generate professional articles, ads, and social media ideas in Arabic and English within seconds.">أنشئ مقالات احترافية، إعلانات، وأفكار محتوى لمنصات التواصل الاجتماعي باللغتين العربية والإنجليزية بثوانٍ.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-violet-500/10 text-violet-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition">📊</div>
+                    <h3 class="text-xl font-bold mb-3" data-ar="تحليل البيانات والتقارير" data-en="Data Analysis & Reports">تحليل البيانات والتقارير</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-ar="ارفع ملفاتك أو أدخل بياناتك للحصول على تحليلات دقيقة، رسوم توضيحية، ورؤى استراتيجية لصنع القرار." data-en="Upload files or input data to get precise analytics, charts, and strategic insights for decision making.">ارفع ملفاتك أو أدخل بياناتك للحصول على تحليلات دقيقة، رسوم توضيحية، ورؤى استراتيجية لصنع القرار.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition">🏢</div>
+                    <h3 class="text-xl font-bold mb-3" data-ar="تخطيط الشركات والأعمال" data-en="Enterprise & Business Planning">تخطيط الشركات والأعمال</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-ar="مساعد ذكي خاص للمدراء وأصحاب المشاريع لبناء خطط العمل، تقييم الأداء، وإدارة المشاريع بكفاءة." data-en="Dedicated AI assistant for managers and business owners to build work plans, assess performance, and manage projects.">مساعد ذكي خاص للمدراء وأصحاب المشاريع لبناء خطط العمل، تقييم الأداء، وإدارة المشاريع بكفاءة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2026 أداة الذكاء الاصطناعي الذكية. جميع الحقوق محفوظة.</p>
-    <div>
-      <a onclick="openModal('privacyModal')">سياسة الخصوصية</a> | 
-      <a onclick="openModal('aboutModal')">من نحن</a> | 
-      <a onclick="openModal('contactModal')">اتصل بنا</a>
-    </div>
-  </footer>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-4 inline-block" data-ar="خصم 30% لفترة محدودة على الاشتراكات السنوية" data-en="Limited Time: 30% OFF on Annual Plans">خصم 30% لفترة محدودة على الاشتراكات السنوية</span>
+                <h2 class="text-3xl font-bold mb-4" data-ar="باقات تناسب الأفراد والشركات" data-en="Plans Suited for Individuals & Businesses">باقات تناسب الأفراد والشركات</h2>
+                <p class="text-slate-400" data-ar="اختر الباقة المناسبة لاحتياجاتك وابدأ العمل فوراً" data-en="Choose the right plan for your needs and start working immediately">اختر الباقة المناسبة لاحتياجاتك وابدأ العمل فوراً</p>
+            </div>
 
-  <div id="privacyModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('privacyModal')">&times;</span>
-      <h2>سياسة الخصوصية</h2>
-      <p>نحن نحترم خصوصية زوارنا. تسترشد هذه السياسة بنوعية المعلومات التي نجمعها وكيفية استخدامها.</p>
-      <p>نحن نستخدم شركات إعلان كأطراف ثالثة لتقديم الإعلانات عندما تزور موقعنا (مثل Google AdSense). قد تستخدم هذه الشركات معلومات حول زياراتك لهذا الموقع من أجل تقديم إعلانات حول البضائع والخدمات التي تهمك عن طريق ملف تعريف الارتباط (Cookies).</p>
-    </div>
-  </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2" data-ar="باقة الأفراد" data-en="Starter Plan">باقة الأفراد</h3>
+                        <p class="text-slate-400 text-sm mb-6" data-ar="مثالية للاستخدام اليومي وصناع المحتوى" data-en="Ideal for daily use and content creators">مثالية للاستخدام اليومي وصناع المحتوى</p>
+                        <div class="text-3xl font-black mb-6">$9<span class="text-sm font-normal text-slate-400" data-ar="/ شهرياً" data-en="/ month">/ شهرياً</span></div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center gap-2">✓ <span data-ar="توليد غير محدود للنصوص" data-en="Unlimited text generation">توليد غير محدود للنصوص</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-ar="دعم اللغتين العربية والإنجليزية" data-en="Arabic & English support">دعم اللغتين العربية والإنجليزية</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-ar="أدوات تنظيم الأفكار اليومية" data-en="Daily productivity tools">أدوات تنظيم الأفكار اليومية</span></li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-sm transition" data-ar="اشترك الآن" data-en="Subscribe Now">اشترك الآن</button>
+                </div>
 
-  <div id="aboutModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('aboutModal')">&times;</span>
-      <h2>من نحن</h2>
-      <p>موقع "أداة الذكاء الاصطناعي الذكية" هو منصة أدوات ويب مجانية تهدف إلى تقديم حلول سريعة ومبسطة للتعامل مع النصوص ومساعدتك في مهامك اليومية بكفاءة عالية.</p>
-    </div>
-  </div>
+                <!-- Pro Plan (Featured) -->
+                <div class="p-8 rounded-2xl bg-gradient-to-b from-indigo-950/60 to-slate-900 border-2 border-indigo-500 relative flex flex-col justify-between shadow-xl shadow-indigo-500/10">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-indigo-600 text-white text-xs font-bold rounded-full" data-ar="الأكثر طلباً" data-en="Most Popular">الأكثر طلباً</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2" data-ar="باقة المحترفين" data-en="Pro Plan">باقة المحترفين</h3>
+                        <p class="text-slate-400 text-sm mb-6" data-ar="للمحترفين وأصحاب المشاريع الناشئة" data-en="For professionals and startups">للمحترفين وأصحاب المشاريع الناشئة</p>
+                        <div class="text-3xl font-black mb-6">$29<span class="text-sm font-normal text-slate-400" data-ar="/ شهرياً" data-en="/ month">/ شهرياً</span></div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center gap-2">✓ <span data-ar="جميع ميزات باقة الأفراد" data-en="All starter features">جميع ميزات باقة الأفراد</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-ar="تحليل البيانات والملفات المتقدم" data-en="Advanced data & file analysis">تحليل البيانات والملفات المتقدم</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-ar="أولوية المعالجة والدعم الفني" data-en="Priority processing & support">أولوية المعالجة والدعم الفني</span></li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-indigo-600/30" data-ar="ابدأ التجربة المتقدمة" data-en="Start Pro Trial">ابدأ التجربة المتقدمة</button>
+                </div>
 
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal('contactModal')">&times;</span>
-      <h2>اتصل بنا</h2>
-      <p>إذا كان لديك أي استفسار أو اقتراح، يمكنك التواصل معنا عبر البريد الإلكتروني:</p>
-      <p><strong>support@smart-ai-tool.com</strong></p>
-    </div>
-  </div>
+                <!-- Enterprise Plan -->
+                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2" data-ar="باقة الشركات والأعمال" data-en="Enterprise Plan">باقة الشركات والأعمال</h3>
+                        <p class="text-slate-400 text-sm mb-6" data-ar="للمدراء والشركات الكبرى مع حماية فائقة" data-en="For managers and large enterprises with high security">للمدراء والشركات الكبرى مع حماية فائقة</p>
+                        <div class="text-3xl font-black mb-6">$89<span class="text-sm font-normal text-slate-400" data-ar="/ شهرياً" data-en="/ month">/ شهرياً</span></div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center gap-2">✓ <span data-ar="مساعد المدراء واتخاذ القرار الذكي" data-en="AI Manager & decision assistant">مساعد المدراء واتخاذ القرار الذكي</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-ar="تشفير كامل وحماية خصوصية البيانات" data-en="End-to-end encryption & privacy">تشفير كامل وحماية خصوصية البيانات</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-ar="مدير حساب مخصص ودعم على مدار الساعة" data-en="Dedicated account manager 24/7">مدير حساب مخصص ودعم على مدار الساعة</span></li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-sm transition" data-ar="تواصل مع المبيعات" data-en="Contact Sales">تواصل مع المبيعات</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    function processText() {
-      const input = document.getElementById('inputText').value;
-      const output = document.getElementById('outputResult');
-      if (!input.trim()) {
-        output.innerText = 'يرجى كتابة نص أولاً!';
-        return;
-      }
-      output.innerText = 'جاري معالجة النص... \n\n' + input.split('').reverse().join('');
-    }
+    <!-- Security Section -->
+    <section id="security" class="py-24 border-t border-slate-800/80 bg-slate-900/40">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-3xl mx-auto mb-6">🔒</div>
+            <h2 class="text-3xl font-bold mb-4" data-ar="أمان وحماية بيانات بمعايير عالمية" data-en="World-Class Data Security & Privacy">أمان وحماية بيانات بمعايير عالمية</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed" data-ar="نحن نلتزم بأعلى معايير الخصوصية والأمان. جميع بياناتك وملفاتك مشفرة بالكامل ولا يتم مشاركتها أو استخدامها لأغراض التدريب العام، لتوفير بيئة آمنة تماماً للأفراد والشركات." data-en="We adhere to the highest privacy and security standards. All your data and files are fully encrypted and never shared or used for general training, ensuring a totally safe environment.">
+                نحن نلتزم بأعلى معايير الخصوصية والأمان. جميع بياناتك وملفاتك مشفرة بالكامل ولا يتم مشاركتها أو استخدامها لأغراض التدريب العام، لتوفير بيئة آمنة تماماً للأفراد والشركات.
+            </p>
+            <div class="inline-flex flex-wrap justify-center gap-6 text-sm text-slate-300">
+                <span class="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-xl border border-slate-800">🛡️ تشفير بنكي SSL/TLS</span>
+                <span class="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-xl border border-slate-800">📋 متوافق مع سياسات GDPR</span>
+                <span class="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-xl border border-slate-800">⚡ سيرفرات فائقة السرعة والأمان</span>
+            </div>
+        </div>
+    </section>
 
-    function openModal(id) {
-      document.getElementById(id).style.display = 'flex';
-    }
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-12 bg-slate-950 text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-2 space-x-reverse">
+                <span class="font-bold text-slate-300">OmniMind AI</span>
+                <span>© 2026. All rights reserved.</span>
+            </div>
+            <div class="flex space-x-6 space-x-reverse text-slate-400">
+                <a href="#" class="hover:text-indigo-400" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a>
+                <a href="#" class="hover:text-indigo-400" data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</a>
+                <a href="#" class="hover:text-indigo-400" data-ar="الدعم الفني" data-en="Support">الدعم الفني</a>
+            </div>
+        </div>
+    </footer>
 
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-  </script>
+    <!-- Language Toggle Script -->
+    <script>
+        let currentLang = 'ar';
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            const root = document.getElementById('html-root');
+            const langBtnText = document.getElementById('lang-btn-text');
+            
+            if (currentLang === 'en') {
+                root.setAttribute('dir', 'ltr');
+                root.setAttribute('lang', 'en');
+                document.body.classList.remove('font-arabic');
+                document.body.classList.add('en-font');
+                langBtnText.innerText = 'العربية';
+            } else {
+                root.setAttribute('dir', 'rtl');
+                root.setAttribute('lang', 'ar');
+                document.body.classList.remove('en-font');
+                document.body.classList.add('font-arabic');
+                langBtnText.innerText = 'English';
+            }
+
+            // Translate all elements with data-ar and data-en
+            document.querySelectorAll('[data-ar]').forEach(el => {
+                el.innerText = el.getAttribute(`data-${currentLang}`);
+            });
+        }
+    </script>
 </body>
 </html>
