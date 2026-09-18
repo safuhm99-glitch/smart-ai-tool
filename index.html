@@ -19,7 +19,7 @@
         }
     </script>
     <style>
-        body { font-family: 'Tajawal', sans-serif; }
+        body { font-family: 'Tajawal', sans-serif; scroll-behavior: smooth; }
         .en-font { font-family: 'Inter', sans-serif; }
     </style>
 </head>
@@ -33,11 +33,11 @@
                 <span class="text-2xl font-black tracking-wider bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">OmniMind AI</span>
             </div>
             
-            <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-medium text-slate-300">
+            <nav class="hidden md:flex items-center space-x-6 space-x-reverse text-sm font-medium text-slate-300">
                 <a href="#features" class="hover:text-indigo-400 transition" data-ar="المميزات" data-en="Features">المميزات</a>
-                <a href="#solutions" class="hover:text-indigo-400 transition" data-ar="للأفراد والشركات" data-en="Solutions">للأفراد والشركات</a>
                 <a href="#pricing" class="hover:text-indigo-400 transition" data-ar="الباقات والأسعار" data-en="Pricing">الباقات والأسعار</a>
-                <a href="#security" class="hover:text-indigo-400 transition" data-ar="الأمان والخصوصية" data-en="Security">الأمان والخصوصية</a>
+                <a href="#about" class="hover:text-indigo-400 transition" data-ar="من نحن" data-en="About Us">من نحن</a>
+                <a href="#contact" class="hover:text-indigo-400 transition" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a>
             </nav>
 
             <div class="flex items-center space-x-4 space-x-reverse">
@@ -101,7 +101,7 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- Pricing & Checkout Section -->
     <section id="pricing" class="py-24 border-t border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
@@ -123,7 +123,7 @@
                             <li class="flex items-center gap-2">✓ <span data-ar="أدوات تنظيم الأفكار اليومية" data-en="Daily productivity tools">أدوات تنظيم الأفكار اليومية</span></li>
                         </ul>
                     </div>
-                    <button class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-sm transition" data-ar="اشترك الآن" data-en="Subscribe Now">اشترك الآن</button>
+                    <button onclick="alert('سيتم تفعيل بوابة الدفع الإلكتروني قريباً لاستلام قيمة الاشتراك بأمان.');" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-sm transition" data-ar="اشترك الآن" data-en="Subscribe Now">اشترك الآن</button>
                 </div>
 
                 <!-- Pro Plan (Featured) -->
@@ -139,7 +139,7 @@
                             <li class="flex items-center gap-2">✓ <span data-ar="أولوية المعالجة والدعم الفني" data-en="Priority processing & support">أولوية المعالجة والدعم الفني</span></li>
                         </ul>
                     </div>
-                    <button class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-indigo-600/30" data-ar="ابدأ التجربة المتقدمة" data-en="Start Pro Trial">ابدأ التجربة المتقدمة</button>
+                    <button onclick="alert('سيتم تفعيل بوابة الدفع الإلكتروني قريباً لاستلام قيمة الاشتراك بأمان.');" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-indigo-600/30" data-ar="ابدأ التجربة المتقدمة" data-en="Start Pro Trial">ابدأ التجربة المتقدمة</button>
                 </div>
 
                 <!-- Enterprise Plan -->
@@ -154,25 +154,49 @@
                             <li class="flex items-center gap-2">✓ <span data-ar="مدير حساب مخصص ودعم على مدار الساعة" data-en="Dedicated account manager 24/7">مدير حساب مخصص ودعم على مدار الساعة</span></li>
                         </ul>
                     </div>
-                    <button class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-sm transition" data-ar="تواصل مع المبيعات" data-en="Contact Sales">تواصل مع المبيعات</button>
+                    <button onclick="alert('سيتم تفعيل بوابة الدفع الإلكتروني قريباً لاستلام قيمة الاشتراك بأمان.');" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-sm transition" data-ar="تواصل مع المبيعات" data-en="Contact Sales">تواصل مع المبيعات</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Security Section -->
-    <section id="security" class="py-24 border-t border-slate-800/80 bg-slate-900/40">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-3xl mx-auto mb-6">🔒</div>
-            <h2 class="text-3xl font-bold mb-4" data-ar="أمان وحماية بيانات بمعايير عالمية" data-en="World-Class Data Security & Privacy">أمان وحماية بيانات بمعايير عالمية</h2>
-            <p class="text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed" data-ar="نحن نلتزم بأعلى معايير الخصوصية والأمان. جميع بياناتك وملفاتك مشفرة بالكامل ولا يتم مشاركتها أو استخدامها لأغراض التدريب العام، لتوفير بيئة آمنة تماماً للأفراد والشركات." data-en="We adhere to the highest privacy and security standards. All your data and files are fully encrypted and never shared or used for general training, ensuring a totally safe environment.">
-                نحن نلتزم بأعلى معايير الخصوصية والأمان. جميع بياناتك وملفاتك مشفرة بالكامل ولا يتم مشاركتها أو استخدامها لأغراض التدريب العام، لتوفير بيئة آمنة تماماً للأفراد والشركات.
+    <!-- About Us Section -->
+    <section id="about" class="py-24 border-t border-slate-800/80 bg-slate-900/40">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-4 inline-block" data-ar="من نحن" data-en="About Us">من نحن</span>
+            <h2 class="text-3xl font-bold mb-6" data-ar="نصنع مستقبل الإنتاجية بالذكاء الاصطناعي" data-en="Shaping the Future of Productivity with AI">نصنع مستقبل الإنتاجية بالذكاء الاصطناعي</h2>
+            <p class="text-slate-300 text-lg leading-relaxed mb-6" data-ar="منصة OmniMind AI هي منصة رائدة تهدف إلى تمكين الأفراد وصناع المحتوى وأصحاب الشركات من استغلال قوة الذكاء الاصطناعي لتسهيل المهام اليومية، تحليل البيانات بدقة، وتسريع وتيرة نمو الأعمال بكفاءة عالية." data-en="OmniMind AI is a leading platform empowering individuals, creators, and businesses to leverage the power of artificial intelligence to streamline daily tasks, analyze data precisely, and accelerate growth.">
+                منصة OmniMind AI هي منصة رائدة تهدف إلى تمكين الأفراد وصناع المحتوى وأصحاب الشركات من استغلال قوة الذكاء الاصطناعي لتسهيل المهام اليومية، تحليل البيانات بدقة، وتسريع وتيرة نمو الأعمال بكفاءة عالية.
             </p>
-            <div class="inline-flex flex-wrap justify-center gap-6 text-sm text-slate-300">
-                <span class="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-xl border border-slate-800">🛡️ تشفير بنكي SSL/TLS</span>
-                <span class="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-xl border border-slate-800">📋 متوافق مع سياسات GDPR</span>
-                <span class="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-xl border border-slate-800">⚡ سيرفرات فائقة السرعة والأمان</span>
+            <p class="text-slate-400 leading-relaxed" data-ar="نؤمن بأن التقنية يجب أن تكون في خدمة الإنسان لتوفر له الوقت والجهد للتركيز على الابتكار والإبداع." data-en="We believe that technology should serve humanity by saving time and effort to focus on innovation and creativity.">
+                نؤمن بأن التقنية يجب أن تكون في خدمة الإنسان لتوفر له الوقت والجهد للتركيز على الابتكار والإبداع.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-24 border-t border-slate-800/80">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-xs font-semibold mb-4 inline-block" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</span>
+                <h2 class="text-3xl font-bold mb-3" data-ar="نحن هنا لمساعدتك والرد على استفساراتك" data-en="We Are Here to Help You">نحن هنا لمساعدتك والرد على استفساراتك</h2>
+                <p class="text-slate-400 text-sm" data-ar="املأ النموذج أدناه وسيقوم فريقنا بالتواصل معك في أقرب وقت." data-en="Fill out the form below and our team will get back to you shortly.">املأ النموذج أدناه وسيقوم فريقنا بالتواصل معك في أقرب وقت.</p>
             </div>
+            <form onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح! شكراً لتواصلك معنا.');" class="bg-slate-900 p-8 rounded-2xl border border-slate-800 space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2" data-ar="الاسم الكريم" data-en="Your Name">الاسم الكريم</label>
+                    <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 focus:outline-none focus:border-indigo-500 transition" placeholder="أدخل اسمك هنا...">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2" data-ar="البريد الإلكتروني" data-en="Email Address">البريد الإلكتروني</label>
+                    <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 focus:outline-none focus:border-indigo-500 transition" placeholder="name@example.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2" data-ar="رسالتك أو استفسارك" data-en="Your Message">رسالتك أو استفسارك</label>
+                    <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 focus:outline-none focus:border-indigo-500 transition" placeholder="كيف يمكننا مساعدتك اليوم؟"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition shadow-lg shadow-indigo-600/30" data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</button>
+            </form>
         </div>
     </section>
 
@@ -184,9 +208,9 @@
                 <span>© 2026. All rights reserved.</span>
             </div>
             <div class="flex space-x-6 space-x-reverse text-slate-400">
-                <a href="#" class="hover:text-indigo-400" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a>
-                <a href="#" class="hover:text-indigo-400" data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</a>
-                <a href="#" class="hover:text-indigo-400" data-ar="الدعم الفني" data-en="Support">الدعم الفني</a>
+                <a href="#pricing" class="hover:text-indigo-400" data-ar="الباقات" data-en="Pricing">الباقات</a>
+                <a href="#about" class="hover:text-indigo-400" data-ar="من نحن" data-en="About Us">من نحن</a>
+                <a href="#contact" class="hover:text-indigo-400" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a>
             </div>
         </div>
     </footer>
